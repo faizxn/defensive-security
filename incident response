@@ -1,0 +1,27 @@
+
+
++ proactive capabilities
+
+	preparation	 	-   design.. development and training. 
+	detection		  -   monitor network and sytem to detect alert and report.
+	analysis		  -   gather information and then prioritizing incident and setp for response.  
+                        + endpoint analysis
+                        + binary analysis
+                        + enterprise analysis
+
+
++ responsive capabilities
+
+	containment 	- strategy for containing an incident is based on the intelligence and indicators of compromise gathered during the analysis phase.
+								+ Coordinated Shutdown : Once identifying the compromised systems perform a coordinated shutdown of these devices. 
+								+ Wipe and Rebuild : Wipe the compromised systems and rebuild the operating systems from scratch.			
+								
+	eradicate		-  once we identified the malicious actors. block the communication from all channel. 	
+	recover			-  develop remediation strategy and roadmap. 
+                     + focus on resuming normal business operations.
+                     + develop a long-term risk mitigation strategy.
+                     + document the incident to improve IR plan.
+
+
+
+
