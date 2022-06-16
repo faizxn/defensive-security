@@ -1,12 +1,16 @@
 
+ 
+ threat intelligence: is information about threats that help to mitigate harmful events is cyberspace. (4) main types in threat intelligence:
+			> strategic > technical > tactical > operational
+			
  #> IoC collects threat information using Threat Intelligence feeds.  
- 			OTX AlignValut 				   
+ 			
+			OTX AlignValut 				   
 			Cisco Telous
 			Google Safe Browsing
 			Minemeld Palo Alto				
 						 
-Threat Intelligence feeds are continuous data streams filled with threat information 
+Threat Intelligence feeds are continuous data streams filled with threat information  
 IoC information form Threat Threat -> SIEM (3rd party integration support) can take threat intel data inputs 
-
 local enviroment with co-relate kore..  
  
