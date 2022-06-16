@@ -1,0 +1,12 @@
+
+ #> IoC collects threat information using Threat Intelligence feeds.  
+ 			OTX AlignValut 				   
+			Cisco Telous
+			Google Safe Browsing
+			Minemeld Palo Alto				
+						 
+Threat Intelligence feeds are continuous data streams filled with threat information 
+IoC information form Threat Threat -> SIEM (3rd party integration support) can take threat intel data inputs 
+
+local enviroment with co-relate kore..  
+ 
