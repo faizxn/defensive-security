@@ -1,0 +1,16 @@
+
+	set src-subnet is local network and dst subnet is any.
+	set src-subnet $HOME_NET -> 10.0.0.0/24 under /etc/snort/snort.conf
+	
+	http://www.cyb3rs3c.net/ used gui based rule-set .. 
+	
+	snort -T -i ens33 -c /etc/snort/snort.conf		| check rules-set and configuration
+													| comment all communites rules except local.rules
+	
+	
+	nano /etc/snort/rules/local.rules				| user define rules
+	
+	alert icmp any any -> $HOME_NET any (msg: "ICMP Ping Detected"; sid:10001; rev:1;)
+	alert tcp  any any -> $HOME_NET 22  (msg: "SSH Authentication Attempt"; sid:10001; rev:1;)
+	
+													|check snort documentation rules to match with requird one
