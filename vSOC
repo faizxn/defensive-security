@@ -1,0 +1,12 @@
+
++ Wazuh (Log Analysis) – Analyze logs received from endpoint and services. Ability to discard noisy alerts to limit overflow of unnecessary data. 
++ Graylog (Log Ingestion) – Collect logs originating on endpoint devices. Normalize log to a name so that faster searching and better virtualization can be built. 
++ Wazuh Indexer – OpenSearch Fork (Backend Storage) – Stored received logs for periods of time. Fast searching and viewing data. 
++ Grafana (Visualization) - Ability to view logs via widgets and dashboards.
++ OpenCT / MISP (Intelligence Enrichment) – Enrich received log with threat intelligence gathered from various providers. Ability to parse. 
++ theHive / Cortex  (Case Management) – Platform to view and react with high severity events. 
++ Shuffle – (SOAR Platform)
++ Velociraptor (Investigation) – Incident Response. Quarantine a device. Ability to collect remotely from endpoint forensics. 
++ InfluxDB/ UptimeKuma (Health Monitoring) – Monitor resource consumed on endpoint. Ability to create real-time when health check thresholds are meet. 
++ OpnSense (NextGen Firewall) - 
+
