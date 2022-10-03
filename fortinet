@@ -1,0 +1,79 @@
+
+
+show system interface
+
+config system interface
+ edit port1
+ set mode static
+ set ip 172.16.0.100/24
+
+get router info routing-table all
+
+config router static
+ edit 1
+ set dst 0.0.0.0/0
+ set gateway 172.16.0.1
+ set device port 1
+ set allowaccess ping http https ssh telnet
+
+execute ping 1.1.1.1 
+
+........................................................
+fortinet firewall works as router as well without configuring zones
+........................................................
+
+by default different zones cant communicate with each other. policy must configure 
+lan2dmz and dmz2lan policy to get accesses
+
+........................................................
+types of mode router/nat & transparent 
+........................................................
+
+ngfw has two mode which is profile-based and policy-based. (system->setting->ngfw mode)
+ 
+profile-based (default) is the traditional mode where a user needs to create an av-web-ips profile which is applied to the policy.
+policy-based mode is new. users can add applications and web filtering categories directly to a policy. 
+
+........................................................
+
+destination nat with profile based 
+
+policy and object-> virtuals ips 
+
+	name: lan-rdp
+	external-ip : 59.153.100.1 (wan-ip)
+	interface-ip : 172.16.100.100 (lan-ip)
+	
+	optional-filters->services->rdp 
+	
+	
+policy and object-> ipv4 policy
+
+	name: wan-to-lan-rdp
+	incoming-interface : wan
+	outcoming-interface : lan
+	
+	destination : lan-rdp
+	services: all
+	
+	nat: enabled
+	log allowed traffic : all sessions
+
+........................................................
+
+source nat with policy based.
+
+system-> settings -> ngfw mode (policy based) -> central nat would active under policy and objects 
+policy and object -> central nat 
+
+				incoming-interface : lan
+				outcoming-interface : wan
+				source-addr : all/custom
+				destination-addr : all/custom
+		
+........................................................
+
+
+
+
+ 
