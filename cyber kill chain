@@ -1,0 +1,80 @@
+
+<The term kill chain is a military concept which identifies the structure of an attack>
+
+
+#Reconnaissance:  information gathering about the target
+
+	Goal: Find weakness 
+
+
+Passive reconnaissance - is an attempt to gain information about targeted computers and networks without actively engaging with the system. 
+	Google Dork, Shodan IO, WhoIS, VirusTotal
+	
+	Protect: limit public information.. modify the server error messgaes.
+	
+	
+Active reconnaissance - attacker/intruders engages with the target system, typically conducting a port scan and vulerablities.
+	Nmap, Nussus, OpenVAS, Nikto, Metasploit
+	
+	Protect: Disable unused ports and services.. Honeyport.. Firewall IPS.. TOR and 3rd Party VPN inbound blocking.. 
+	
+
+	
+# Weaponization: find or create the attack to exploit the weakness using payload.
+	
+	Cain and Abel.. SQLMap.. AirCrack.. Metasploit.. Exploit-DB.. Veil Framework.. Wapiti.. Brupsuite.. TheFatRat
+	
+
+	Defensive
+		
+		administrative control	: patch management.. disable::office-macros.. javaScript and brower-plugins
+		technical control		: AV .. IPS.. Email Security.. MFA.. Audit Logging.. 	
+		
+		
+# Delivery : transmission of weapon  to target via email attachment.. websites and usb drivers..
+		
+		websites 		- web/dns filtering
+		social media 	- phishing campaigns
+		user input 		- ips/ids
+		email			- dkim & spf
+		usb				- disable usb no admin rights
+	
+
+# Explitation : attack executed..
+
+		sql injection.. buffer-overflow.. javascript hijack.. malware			
+		
+		protect: dep (data execution prevention).. anti-exploit
+		detect : sanboxing
+		
+    
+# Installation : payload injected after the exploit to gain access..
+
+		dll hijacking.. meterpreter.. remote access tools (rat).. registry changes.. powershell commands.. 
+		
+		protect	 : linux:chroot | windows: disabled powershell
+		detect 	 : uba/edr
+		response : follow incident response sops
+		recover  : restore or reimage
+		
+# Commanad & Control:  remote control of the system..  (C&C means system has been compromised)
+		
+		network segmentation  (isolate)
+		micro segmentation 	  (isolate)
+		ngfw c&c blocking	  (protect)
+		dns redirect		  (protect)
+		application control	  (detect)
+		ioc 				  (detect)
+		
+		
+ # Actions on Objective: attacker executes desire actions
+ 
+		financial
+		political
+		espionage
+		malicious insider
+		lateral movement
+    
+    
+    
+    
